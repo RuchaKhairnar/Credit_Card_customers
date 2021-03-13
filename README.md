@@ -12,8 +12,8 @@ Here's a summary of all 5 methods and their accuracies.
              
              |Model                |  Accuracy  |   Sensitivity | Specificity |
              |-------------------- | ---------- | ------------- | ----------- |
-             |Logistic Regression  |  90.18%    |     96.88%    |   42.94%    | 
-             |Descision Trees      |  96.61%    |     97.32%    |   91.62%    |
-             |Random Forest        |  98.74%    |     99.26%    |   95.09%    |
-             |k-Nearest Neighbours |  94.65%    |     96.59%    |   81.19%    |
-             |SVM                  |  96.09%    |     99.06%    |   75.46%    |
+             |Logistic Regression  |  90.85%    |     97.06%    |   47.65%    | 
+             |Descision Trees      |  97.33%    |     98.38%    |   89.98%    |
+             |Random Forest        |  99.05%    |     99.47%    |   96.11%    |
+             |k-Nearest Neighbours |  95.89%    |     98.74%    |   76.07%    |
+             |SVM                  |  96.12%    |     99.85%    |   70.14%    |
