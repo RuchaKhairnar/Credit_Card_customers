@@ -109,6 +109,10 @@ chart.Correlation(cor_matrix, histogram=TRUE, pch=19)
 heatmap(x = cor_matrix, symm = TRUE)
 
 
+##Reclassifying gender and dependent count
+data1$Gender<- as.factor(data1$Gender)
+data1$Dependent_count<-as.factor(data1$Dependent_count)
+
 ##eda for Categorical data.
 ggplot(data = data1,mapping = aes(x=Customer_Age,y=..density..)) + 
   geom_freqpoly(mapping = aes(colour=Education_Level))

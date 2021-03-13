@@ -58,6 +58,9 @@ data1<- data1 %>%
             Total_Trans_Ct,          
             Total_Ct_Chng_Q4_Q1,
             Avg_Utilization_Ratio)
+##Adding "sr" in columns
+data1$sr<- 1:nrow(data1)
+colnames(data1)
 
 #dividing the data into existed and attributed 
 data_exist<- data1 %>% 
@@ -67,5 +70,36 @@ data_attrit<- data1 %>%
   filter(Attrition_Flag==1)
 
 colnames(data1)
-colnames(data1) <- make.unique(names(data1))
+#colnames(data1) <- make.unique(names(data1))
+
+
+
+
+
+
+DF<-function(DF, n=0) {
+  DF[rowSums(is.na(DF)) <= n,]
+}
+
+set.seed(000)
+aa1<- data1[sample(data_exist$sr,length(data_exist$sr)*0.6),] %>% DF()
+aa2<- data1[sample(data_attrit$sr,length(data_attrit$sr)*0.7),] %>% DF()
+
+
+
+
+train_data_aa<-rbind(aa1,aa2)
+
+
+aa3<-setdiff(data_exist$sr,aa1$sr)
+test_existaa<-data1[aa3,] %>% DF()
+
+aa4<-setdiff(data_attrit$sr,aa2$sr)
+test_attritaa<- data1[aa4,] %>% DF()
+
+
+test_data_aa<- rbind(test_existaa,test_attritaa)
+
+
+
 

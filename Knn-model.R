@@ -1,10 +1,10 @@
 
 ## Now using K-nearest neighbours
-kn3<-knn3(as.factor(Attrition_Flag)~.,data =train_data,k=7,prob=TRUE)
+kn3<-knn3(as.factor(Attrition_Flag)~.,data =train_data_aa,k=7,prob=TRUE)
 summary(kn3)
 
 ## we predict using kn3
-kn3_predict<-predict(kn3,test_data,type = "class")
+kn3_predict<-predict(kn3,test_data_aa,type = "class")
 plot(kn3_predict)
 
 confusionMatrix(data = as.factor(kn3_predict), reference = test_AF)
