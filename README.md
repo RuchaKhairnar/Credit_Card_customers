@@ -12,8 +12,35 @@ Here's a summary of all 5 methods and their accuracies.
              
              |Model                |  Accuracy  |   Sensitivity | Specificity |
              |-------------------- | ---------- | ------------- | ----------- |
-             |Logistic Regression  |  90.85%    |     97.06%    |   47.65%    | 
+             |Logistic Regression  |  80.05%    |     81.06%    |   73.01%    | 
              |Descision Trees      |  97.33%    |     98.38%    |   89.98%    |
              |Random Forest        |  99.05%    |     99.47%    |   96.11%    |
-             |k-Nearest Neighbours |  95.89%    |     98.74%    |   76.07%    |
-             |SVM                  |  96.12%    |     99.85%    |   70.14%    |
+             |k-Nearest Neighbours |  96.25%    |     97.82%    |   85.82%    |
+             |SVM                  |  95.45%    |     95.79%    |   93.05%    |
+
+
+
+In our case, it is clear that random forest gives the best prediction for attrited data and hence it is an appropriate choice of model.
+
+
+The ' ROC n AUC ' file contains the code used for determining the 
+threshold value of the predictions of logit and svm model. 
+
+The code contains one main test data which is then further divided
+into two test datas i.e. test_1_data and test_2_data to check for overfitting.
+The train and test sets are divided in a way to include both attrited and 
+existing customers . This is done by including a constant proportion of random selected attrited and existing data into the training and testing sets. 
+
+
+IT is kindoff intuitive that SVM model performs best at k=1
+since the dependent variable 'Attrition Flag' is factored into 0 and 1
+so the concept of nearest neighbours doesn't really hold.
+
+
+
+
+
+
+
+
+

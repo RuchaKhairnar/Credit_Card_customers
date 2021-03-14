@@ -12,7 +12,7 @@
                      scale(Contacts_Count_12_mon) + 
                      Gender +
                      Income_Category + 
-                     Marital_Status +
+                    # Marital_Status +
                      scale(Total_Ct_Chng_Q4_Q1) + 
                      log(Avg_Open_To_Buy) * Credit_Limit,
                    family = binomial(link = "logit"), data = train_data_aa)
@@ -27,8 +27,8 @@ plot(pred_model)
 ## Here we define any value less than 0.5 to be predicted as 0 and 
 ##greater than 0.5 to be predicted as 1.
 
-test_data_aa$pred[pred_model<=0.5]<-0
-test_data_aa$pred[pred_model>0.5]<-1
+test_data_aa$pred[pred_model<=0.2]<-0
+test_data_aa$pred[pred_model>0.2]<-1
 table(a1=test_data_aa$pred,b=test_data_aa$Attrition_Flag)
 
 ## we factorise the data so as to use it in consfusion matrix.
@@ -43,4 +43,5 @@ mean(test_data_aa$pred==test_data_aa$Attrition_Flag)
 F_meas(test_pred,test_AF)
 recall(test_pred,test_AF)
 precision(test_pred,test_AF)
+
 
