@@ -23,19 +23,16 @@ Here's a summary of all 5 methods and their accuracies.
 In our case, it is clear that random forest gives the best prediction for attrited data and hence it is an appropriate choice of model.
 
 
-The Roc_n_AUC file contains the code used for determining the 
+The ' ROC n AUC ' file contains the code used for determining the 
 threshold value of the predictions of logit and svm model. 
 
-The R_code file contains one main test data which is then further divided
+The code contains one main test data which is then further divided
 into two test datas i.e. test_1_data and test_2_data to check for overfitting.
 The train and test sets are divided in a way to include both attrited and 
-existing customers . This is done by including a constant proportion of randomly selected attrited and existing data into the training and testing sets. 
+existing customers . This is done by including a constant proportion of random selected attrited and existing data into the training and testing sets. 
 
 
-
-
-PS:
-It is kindoff intuitive that SVM model performs best at k=1
+IT is kindoff intuitive that SVM model performs best at k=1
 since the dependent variable 'Attrition Flag' is factored into 0 and 1
 so the concept of nearest neighbours doesn't really hold.
 

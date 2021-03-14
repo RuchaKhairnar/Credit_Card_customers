@@ -1,6 +1,10 @@
 ##calculating roc and auc for logit model
 
+<<<<<<< HEAD
 ## Changing back plot region to square
+=======
+## Changing bcak plot region to square
+>>>>>>> ea4fe277af4d6a49526032f08898bfcb069d449d
 par(pty = "s")
 
 ##create ROC curve
@@ -46,7 +50,11 @@ head(roc.df_svm,40)
 tail(roc.df_svm)
 
 
+<<<<<<< HEAD
 ## Changing back plot region to max size
+=======
+## Changing bcak plot region to max size
+>>>>>>> ea4fe277af4d6a49526032f08898bfcb069d449d
 par(pty = "m")
 
 
