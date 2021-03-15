@@ -1,24 +1,10 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Credit_Card_customers
 
-A manager at the bank is disturbed with more and more customers leaving
-their credit card services. They would really appreciate if one could
-predict for them who is gonna get churned so they can proactively go to
-the customer to provide them better services and turn customers'
-decisions in the opposite direction Now, this dataset consists of 10,000
-customers mentioning their age, salary, marital_status, credit card
-limit, credit card category, etc.
+A manager at the bank is disturbed with more and more customers leaving their credit card services. They would really appreciate if one could predict for them who is gonna get churned so they can proactively go to the customer to provide them better services and turn customers' decisions in the opposite direction Now, this dataset consists of 10,000 customers mentioning their age, salary, marital_status, credit card limit, credit card category, etc.
 
-We have only 16.07% of customers who have churned. Thus, it's a bit
-difficult to train our model to predict churning customers.
+We have only 16.07% of customers who have churned. Thus, it's a bit difficult to train our model to predict churning customers.
 
-I have used 4 different models with different F scores and accuracies on
-the test set. Here's a summary of all 5 methods and their accuracies.
+I have used 4 different models with different F scores and accuracies on the test set. Here's a summary of all 5 methods and their accuracies.
 
              |Model                |  Accuracy  |   Sensitivity | Specificity |
              |-------------------- | ---------- | ------------- | ----------- |
@@ -27,30 +13,18 @@ the test set. Here's a summary of all 5 methods and their accuracies.
              |Random Forest        |  99.05%    |     99.47%    |   96.11%    |
              |SVM                  |  95.45%    |     95.79%    |   93.05%    |
 
-In our case, it is clear that random forest gives the best prediction
-for attrited data and hence it is an appropriate choice of model.
+In our case, it is clear that random forest gives the best prediction for attrited data and hence it is an appropriate choice of model.
 
-The R_code file contains one main test data which is then further
-divided into two test datas i.e. test_1\_data and test_2\_data to check
-for overfitting. The train and test sets are divided in a way to include
-both attrited and existing customers . This is done by including a
-constant proportion of randomly selected attrited and existing data into
-the training and testing sets.
+The R_code file contains one main test data which is then further divided into two test datas i.e. test_1\_data and test_2\_data to check for overfitting. The train and test sets are divided in a way to include both attrited and existing customers . This is done by including a constant proportion of randomly selected attrited and existing data into the training and testing sets.
 
-The Roc_n\_AUC file contains the code used for determining the threshold
-value of the predictions of logit and svm model.
+The Roc_n\_AUC file contains the code used for determining the threshold value of the predictions of logit and svm model.
 
-The ROC curve of Logit model below gives best combination of specificity
-and sensitivity when their values range from 60 to 80 %
+The ROC curve of Logit model below gives best combination of specificity and sensitivity when their values range from 60 to 80 %
 
 <img src="Credit_Card_customers/Rplot02.png" title="Logit model ROC curve" alt="Logit model ROC curve" width="633"/>
 
-The ROC curve for SVM model is considerably right angled with high AUC
-so we can expect high values of sensitivity and specificity with low
-tradeoff
+The ROC curve for SVM model is considerably right angled with high AUC so we can expect high values of sensitivity and specificity with low tradeoff
 
 ![](Credit_Card_customers/Rplot01.png)
 
-Note - The 'False Positive Percentage' value is obtained using the
-formula ' 1- specificity ' . Hence we aim at lowering FPP (increasing
-sensitivity) and increasing TPP.
+Note - The 'False Positive Percentage' value is obtained using the formula ' 1- specificity ' . Hence we aim at lowering FPP (increasing sensitivity) and increasing TPP.
