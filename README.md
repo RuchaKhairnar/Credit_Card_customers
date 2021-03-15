@@ -21,6 +21,8 @@ The R_code file contains one main test data which is then further divided into t
 The Roc_n\_AUC file contains the code used for determining the threshold value of the predictions of logit and svm model.
 
 The ROC curve of Logit model below gives best combination of specificity and sensitivity when their values range from 60 to 80 %
+
+
 ![Rplot02](https://user-images.githubusercontent.com/75317048/111115034-14731700-858a-11eb-938e-f8ea19b23e26.png)
 
 
