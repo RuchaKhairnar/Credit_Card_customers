@@ -32,4 +32,4 @@ The ROC curve for SVM model is considerably right angled with high AUC so we can
 
 ![Rplot01](https://user-images.githubusercontent.com/75317048/111114991-091feb80-858a-11eb-979e-04006ec51459.png)
 
-Note - The 'False Positive Percentage' value is obtained using the formula ' 1- specificity ' . Hence we aim at lowering FPP (increasing sensitivity) and increasing TPP.
+Note - The 'False Positive Percentage' value is obtained using the formula ' 1- specificity ' . Hence we aim at lowering FPP (increasing specificity) and increasing TPP.
