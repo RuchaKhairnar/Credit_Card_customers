@@ -1,4 +1,4 @@
-![Rplot01](https://user-images.githubusercontent.com/75317048/111114927-f5748500-8589-11eb-967d-45bedf985d7e.png)
+
 # Credit_Card_customers
 
 A manager at the bank is disturbed with more and more customers leaving their credit card services. They would really appreciate if one could predict for them who is gonna get churned so they can proactively go to the customer to provide them better services and turn customers' decisions in the opposite direction Now, this dataset consists of 10,000 customers mentioning their age, salary, marital_status, credit card limit, credit card category, etc.
@@ -26,6 +26,8 @@ The ROC curve of Logit model below gives best combination of specificity and sen
 
 
 The ROC curve for SVM model is considerably right angled with high AUC so we can expect high values of sensitivity and specificity with low tradeoff
+
+
 ![Rplot01](https://user-images.githubusercontent.com/75317048/111114991-091feb80-858a-11eb-979e-04006ec51459.png)
 
 Note - The 'False Positive Percentage' value is obtained using the formula ' 1- specificity ' . Hence we aim at lowering FPP (increasing sensitivity) and increasing TPP.
