@@ -23,6 +23,7 @@ library(RColorBrewer)
 library(randomForest)
 library(effects)
 library(e1071)
+library(pROC)
 
 #drop 3 colnames
 data1<-BankChurners[,c(-22,-23,-1)]
