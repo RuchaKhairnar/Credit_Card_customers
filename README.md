@@ -5,7 +5,7 @@ A manager at the bank is disturbed with more and more customers leaving their cr
 
 We have only 16.07% of customers who have churned. Thus, it's a bit difficult to train our model to predict churning customers.
 
-I have used 4 different models with different F scores and accuracies on the test set. Here's a summary of all 5 methods and their accuracies.
+I have used 4 different models with different F scores and accuracies on the test set. Here's a summary of all 4 methods and their accuracies.
 
              |Model                |  Accuracy  |   Sensitivity | Specificity |
              |-------------------- | ---------- | ------------- | ----------- |
